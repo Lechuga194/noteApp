@@ -1,4 +1,4 @@
-package com.example.noteapp.nodes;
+package com.example.noteapp.notes;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.noteapp.BaseActivity;
 import com.example.noteapp.LoginActivity;
 import com.example.noteapp.R;
-import com.example.noteapp.nodes.models.Note;
+import com.example.noteapp.notes.models.Note;
 import com.example.noteapp.utils.Constants;
 
 import java.util.ArrayList;
@@ -51,7 +51,7 @@ public class NotesActivity extends BaseActivity {
         this.populateNoteList();
 
         //Adapter que se encarga de manejar la info del Recycleview
-        NotesAdapter adapter = new NotesAdapter(noteList);
+        NotesAdapter adapter = new NotesAdapter(noteList, NotesActivity.this);
         recycleViewNotes.setAdapter(adapter);
 
         recycleViewNotes.setHasFixedSize(true); //Dice que los datos no cambiaran en runtime

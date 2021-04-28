@@ -1,4 +1,4 @@
-package com.example.noteapp.nodes.models;
+package com.example.noteapp.notes.models;
 
 public class Note {
     private String titulo, cuerpo;

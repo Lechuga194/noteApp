@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
-import com.example.noteapp.nodes.NotesActivity;
+import com.example.noteapp.notes.NotesActivity;
 import com.example.noteapp.utils.Constants;
 
 import java.util.Timer;

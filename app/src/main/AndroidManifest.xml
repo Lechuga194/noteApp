@@ -16,8 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity"/>
-        <activity android:name=".nodes.NotesActivity"/>
-        <activity android:name=".DetailNoteActivity"/>
+        <activity android:name=".notes.NotesActivity"/>
+        <activity android:name=".notes.DetailNoteActivity"/>
     </application>
 
 </manifest>

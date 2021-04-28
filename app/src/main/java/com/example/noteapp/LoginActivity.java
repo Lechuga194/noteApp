@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import com.example.noteapp.nodes.NotesActivity;
+import com.example.noteapp.notes.NotesActivity;
 import com.example.noteapp.utils.Constants;
 
 public class

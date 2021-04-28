@@ -1,7 +1,6 @@
-package com.example.noteapp.nodes;
+package com.example.noteapp.notes;
 
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
