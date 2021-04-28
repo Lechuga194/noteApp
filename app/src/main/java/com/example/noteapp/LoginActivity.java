@@ -11,8 +11,10 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.noteapp.utils.Constants;
+
 public class
-LoginActivity extends AppCompatActivity {
+LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +31,7 @@ LoginActivity extends AppCompatActivity {
                 String userPassword = editTextUserPassword.getText().toString();
 
                 if(userName.equals("michiski") && userPassword.equals("1407")) {
-                    setUserSession();
+                    prefs.setPref(Constants.PREFS_USER, true); //nos permitira mantener las sesiones del usuario
                     Intent intent = new Intent(LoginActivity.this, NotesActivity.class);
                     intent.putExtra("userName", userName);
                     intent.putExtra("userPassword", userPassword);
@@ -39,14 +41,5 @@ LoginActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    /**
-     * Metodo que nos permitira mantener las sesiones del usuario
-     */
-    private void setUserSession(){
-        SharedPreferences.Editor editor = getSharedPreferences("prefs_appNote", MODE_PRIVATE).edit();
-        editor.putBoolean("isUserLogged", true);
-        editor.apply();
     }
 }

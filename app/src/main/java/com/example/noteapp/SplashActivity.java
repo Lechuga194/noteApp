@@ -7,18 +7,17 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.noteapp.utils.Constants;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
         runSlplash();
-
-
     }
 
     /**
@@ -31,8 +30,7 @@ public class SplashActivity extends AppCompatActivity {
         final Runnable splash = new Runnable() {
             @Override
             public void run() {
-                SharedPreferences prefs = getSharedPreferences("prefs_appNote", MODE_PRIVATE); //Llama a las preferencias guardadas
-                boolean isUserLogged = prefs.getBoolean("isUserLogged", false);
+                boolean isUserLogged = prefs.getPref(Constants.PREFS_USER); //Obtiene si el usuario esta logueado
                 Intent intent = (isUserLogged) ? new Intent(SplashActivity.this, NotesActivity.class) : new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
