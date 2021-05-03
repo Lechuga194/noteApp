@@ -18,6 +18,7 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".notes.NotesActivity"/>
         <activity android:name=".notes.DetailNoteActivity"/>
+        <activity android:name=".notes.NotesAddNote"/>
     </application>
 
 </manifest>

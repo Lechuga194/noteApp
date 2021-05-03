@@ -1,6 +1,8 @@
 package com.example.noteapp.notes.models;
 
-public class Note {
+import java.io.Serializable;
+
+public class Note implements Serializable {
     private String titulo, cuerpo;
 
     public Note(String titulo, String cuerpo){
@@ -22,5 +24,13 @@ public class Note {
 
     public void setCuerpo(String cuerpo) {
         this.cuerpo = cuerpo;
+    }
+
+    @Override
+    public String toString() {
+        return "Note{" +
+                "titulo='" + titulo + '\'' +
+                ", cuerpo='" + cuerpo + '\'' +
+                '}';
     }
 }

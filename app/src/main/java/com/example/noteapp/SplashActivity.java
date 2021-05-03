@@ -50,6 +50,6 @@ public class SplashActivity extends BaseActivity {
          * Timer para correr el splash
          */
         Timer timer = new Timer();
-        timer.schedule(timerTask, 2500);
+        timer.schedule(timerTask, 500);
     }
 }
